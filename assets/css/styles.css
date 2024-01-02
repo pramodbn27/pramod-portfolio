@@ -1198,9 +1198,9 @@ img {
   .about__container {
     column-gap: 5rem;
   }
-  .about__img {
-    width: 350px;
-  }
+  /* .about__img {
+    width: 750px;
+  } */
   .about__description {
     text-align: initial;
   }
