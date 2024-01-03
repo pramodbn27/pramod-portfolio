@@ -824,7 +824,11 @@ img {
   }
 }
 
-
+@media only screen and (max-width: 768px) {
+  .project-item {
+      width: 85%;
+  }
+}
 
 
 /*==================== PROJECT IN MIND ====================*/
