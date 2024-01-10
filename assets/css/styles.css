@@ -301,12 +301,12 @@ img {
   font-size: var(--big-font-size);
 }
 
-.home__subtitle {
+/* .home__subtitle {
   font-size: var(--h3-font-size);
   color: var(--text-color);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-75);
-}
+} */
 
 .home__description {
   margin-bottom: var(--mb-2);
@@ -1424,6 +1424,48 @@ img {
 }
 
 
+/* Typing Effect */
 
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
 
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(201, 35, 35); }
+}
 
+.home__subtitle {
+  display: inline-block;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+   /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  font-size: var(--h3-font-size);
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-75);
+}
+
+/* Media Query for Medium Screens */
+@media screen and (max-width: 768px) {
+  .home__subtitle {
+    
+    animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+    /* Adjusted typing speed */
+  }
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 480px) {
+  .home__subtitle {
+    
+    animation: typing 2.5s steps(20, end), blink-caret .75s step-end infinite;
+    /* Further adjusted typing speed */
+  }
+}

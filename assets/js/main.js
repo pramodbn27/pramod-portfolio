@@ -195,3 +195,8 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+// Typying effect
+document.addEventListener('DOMContentLoaded', (event) => {
+    const subtitle = document.querySelector('.home__subtitle');
+    subtitle.classList.add('typing-animation'); // 'typing-animation' is a class with the animation properties
+});
