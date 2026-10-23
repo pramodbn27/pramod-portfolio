@@ -148,7 +148,16 @@ code { font-family: var(--mono); font-size: 0.88em; }
 }
 .hero__grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
 .hero h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 14px; }
+.hero h1 {
+  color: #ffffff;
+  text-shadow:
+    0 0 6px color-mix(in srgb, var(--neon-2) 60%, transparent),
+    0 0 18px color-mix(in srgb, var(--neon-2) 45%, transparent),
+    0 0 36px color-mix(in srgb, var(--neon-3) 35%, transparent);
+}
+:root[data-theme="light"] .hero h1 { color: var(--text); text-shadow: 0 0 14px color-mix(in srgb, var(--neon-2) 35%, transparent); }
 .hero__role { font-size: clamp(1.1rem, 2.2vw, 1.4rem); font-weight: 600; margin: 0 0 20px; }
+.hero__role-text { display: block; color: var(--text); }
 .hero__role-sub { display: block; color: var(--accent); }
 .hero__lead { font-size: 1.15rem; color: var(--muted); max-width: 36em; margin: 0 0 32px; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
