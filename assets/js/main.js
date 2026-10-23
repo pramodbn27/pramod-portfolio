@@ -44,3 +44,39 @@ if ('IntersectionObserver' in window) {
     observer.observe(el);
   });
 }
+
+// Project gallery viewer
+const lightbox = document.querySelector('.lightbox');
+if (lightbox) {
+  const img = lightbox.querySelector('.lightbox__img');
+  const title = lightbox.querySelector('.lightbox__title');
+  const pos = lightbox.querySelector('.lightbox__pos');
+  let images = [];
+  let index = 0;
+
+  const show = (i) => {
+    index = (i + images.length) % images.length;
+    img.src = images[index];
+    img.alt = `${title.textContent} diagram ${index + 1} of ${images.length}`;
+    pos.textContent = `${index + 1} / ${images.length}`;
+  };
+
+  document.querySelectorAll('.shot__thumb').forEach((thumb) =>
+    thumb.addEventListener('click', () => {
+      images = JSON.parse(thumb.dataset.images);
+      title.textContent = thumb.dataset.title;
+      lightbox.toggleAttribute('data-single', images.length < 2);
+      show(0);
+      lightbox.showModal();
+    })
+  );
+
+  lightbox.querySelector('.lightbox__close').addEventListener('click', () => lightbox.close());
+  lightbox.querySelector('.lightbox__prev').addEventListener('click', () => show(index - 1));
+  lightbox.querySelector('.lightbox__next').addEventListener('click', () => show(index + 1));
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.close(); });
+  lightbox.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') show(index - 1);
+    if (e.key === 'ArrowRight') show(index + 1);
+  });
+}

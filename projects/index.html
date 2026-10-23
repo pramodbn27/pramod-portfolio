@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=a34205c4">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2be52c93">
 </head>
 <body>
 
@@ -81,6 +81,113 @@
       </div>
     </section>
 
+    <section id="gallery" class="section section--alt">
+      <div class="container">
+        <p class="eyebrow">Project gallery</p>
+        <h2>Cloud &amp; DevOps architecture</h2>
+        <p class="section__lead">Earlier hands-on projects across AWS, Kubernetes, CI/CD and multi-cloud. Select a diagram to view it full size.</p>
+        <ul class="cards cards--3 gallery">
+          <li class="card shot">
+            <button class="shot__thumb" type="button" data-title="Serverless with Multi-Cloud" data-images='["/assets/img/projects/serverless-multicloud-1.webp"]' aria-label="View 1 diagram for Serverless with Multi-Cloud">
+              <img src="/assets/img/projects/serverless-multicloud-thumb.webp" alt="Serverless with Multi-Cloud architecture diagram" loading="lazy">
+              <span class="shot__count">1 diagram</span>
+            </button>
+            <div class="shot__body">
+              <h3>Serverless with Multi-Cloud</h3>
+              <p>Auto-scaling web application on AWS across two availability zones, with a serverless pipeline (SNS, Lambda, SES, DynamoDB) that delivers files to Google Cloud Storage. Infrastructure as code with Pulumi, machine images built with Packer, CI/CD with GitHub Actions.</p>
+              <ul class="chips chips--mono"><li>AWS</li><li>GCP</li><li>Pulumi</li><li>Packer</li><li>Lambda</li><li>GitHub Actions</li></ul>
+              <div class="card__links"><a href="https://github.com/orgs/csye6255-pramodbn/repositories" target="_blank" rel="noopener">GitHub &rarr;</a></div>
+            </div>
+          </li>
+          <li class="card shot">
+            <button class="shot__thumb" type="button" data-title="AWS 3-Tier Architecture" data-images='["/assets/img/projects/aws-3-tier-1.webp", "/assets/img/projects/aws-3-tier-2.webp"]' aria-label="View 2 diagrams for AWS 3-Tier Architecture">
+              <img src="/assets/img/projects/aws-3-tier-thumb.webp" alt="AWS 3-Tier Architecture architecture diagram" loading="lazy">
+              <span class="shot__count">2 diagrams</span>
+            </button>
+            <div class="shot__body">
+              <h3>AWS 3-Tier Architecture</h3>
+              <p>Highly available three-tier architecture across us-east-1 and us-west-2 with a warm-standby disaster recovery strategy: Route 53 active-failover, CloudFront and WAF, auto-scaling web and app tiers, RDS cross-region read replicas and cross-region AWS Backup.</p>
+              <ul class="chips chips--mono"><li>AWS</li><li>Terraform</li><li>Multi-region DR</li><li>Route 53</li><li>RDS</li></ul>
+              <div class="card__links"><a href="https://github.com/pramodbn27/aws-3-tier-architecture" target="_blank" rel="noopener">GitHub &rarr;</a></div>
+            </div>
+          </li>
+          <li class="card shot">
+            <button class="shot__thumb" type="button" data-title="EKS CI/CD with GitOps" data-images='["/assets/img/projects/eks-gitops-1.webp"]' aria-label="View 1 diagram for EKS CI/CD with GitOps">
+              <img src="/assets/img/projects/eks-gitops-thumb.webp" alt="EKS CI/CD with GitOps architecture diagram" loading="lazy">
+              <span class="shot__count">1 diagram</span>
+            </button>
+            <div class="shot__body">
+              <h3>EKS CI/CD with GitOps</h3>
+              <p>GitOps delivery to Amazon EKS: CircleCI tests, builds and pushes images and updates Kubernetes manifests, and Argo CD syncs them to an EKS cluster provisioned with Terraform.</p>
+              <ul class="chips chips--mono"><li>Amazon EKS</li><li>Argo CD</li><li>CircleCI</li><li>Terraform</li><li>GitOps</li></ul>
+              <div class="card__links"><a href="https://github.com/pramodbn27/eks-cicd-project" target="_blank" rel="noopener">GitHub &rarr;</a></div>
+            </div>
+          </li>
+          <li class="card shot">
+            <button class="shot__thumb" type="button" data-title="Microservices Platform on EKS" data-images='["/assets/img/projects/microservices-2-1.webp", "/assets/img/projects/microservices-2-2.webp", "/assets/img/projects/microservices-2-3.webp", "/assets/img/projects/microservices-2-4.webp", "/assets/img/projects/microservices-2-5.webp", "/assets/img/projects/microservices-2-6.webp", "/assets/img/projects/microservices-2-7.webp", "/assets/img/projects/microservices-2-8.webp", "/assets/img/projects/microservices-2-9.webp"]' aria-label="View 9 diagrams for Microservices Platform on EKS">
+              <img src="/assets/img/projects/microservices-2-thumb.webp" alt="Microservices Platform on EKS architecture diagram" loading="lazy">
+              <span class="shot__count">9 diagrams</span>
+            </button>
+            <div class="shot__body">
+              <h3>Microservices Platform on EKS</h3>
+              <p>E-commerce microservices (gateway, registry, config, user, catalog, cart, order, payment) on Amazon EKS with Kafka event streaming, API Gateway and MySQL RDS, delivered through Jenkins CI/CD with SonarQube, Artifactory and Helm across DEV, QA, PERF and PROD.</p>
+              <ul class="chips chips--mono"><li>Java / Spring</li><li>Kafka</li><li>Amazon EKS</li><li>Jenkins</li><li>Helm</li></ul>
+              <div class="card__links"><a href="https://github.com/pramodbn27/Microservices-Project-2" target="_blank" rel="noopener">GitHub &rarr;</a></div>
+            </div>
+          </li>
+          <li class="card shot">
+            <button class="shot__thumb" type="button" data-title="Microservices on Amazon EKS" data-images='["/assets/img/projects/microservices-1-1.webp"]' aria-label="View 1 diagram for Microservices on Amazon EKS">
+              <img src="/assets/img/projects/microservices-1-thumb.webp" alt="Microservices on Amazon EKS architecture diagram" loading="lazy">
+              <span class="shot__count">1 diagram</span>
+            </button>
+            <div class="shot__body">
+              <h3>Microservices on Amazon EKS</h3>
+              <p>Containerized microservices on Amazon EKS behind ingress, ALB and WAF, built with CodePipeline, CodeBuild and ECR, backed by MySQL RDS with a read replica, fronted by Cloudflare and monitored with CloudWatch, CloudTrail and New Relic.</p>
+              <ul class="chips chips--mono"><li>Amazon EKS</li><li>CodePipeline</li><li>Terraform</li><li>New Relic</li><li>Cloudflare</li></ul>
+              <div class="card__links"><a href="https://github.com/pramodbn27/Microservices-Project-1" target="_blank" rel="noopener">GitHub &rarr;</a></div>
+            </div>
+          </li>
+          <li class="card shot">
+            <button class="shot__thumb" type="button" data-title="End-to-End DevOps Pipeline" data-images='["/assets/img/projects/devops-2-1.webp"]' aria-label="View 1 diagram for End-to-End DevOps Pipeline">
+              <img src="/assets/img/projects/devops-2-thumb.webp" alt="End-to-End DevOps Pipeline architecture diagram" loading="lazy">
+              <span class="shot__count">1 diagram</span>
+            </button>
+            <div class="shot__body">
+              <h3>End-to-End DevOps Pipeline</h3>
+              <p>Jenkins with Maven and Docker build agents, SonarQube quality gates, JFrog Artifactory and Helm deployments to Kubernetes, monitored with Prometheus and Grafana, on AWS infrastructure provisioned with Terraform and Ansible.</p>
+              <ul class="chips chips--mono"><li>Jenkins</li><li>SonarQube</li><li>Helm</li><li>Prometheus</li><li>Grafana</li><li>Ansible</li></ul>
+              <div class="card__links"><a href="https://github.com/pramodbn27/devops-project-2" target="_blank" rel="noopener">GitHub &rarr;</a></div>
+            </div>
+          </li>
+          <li class="card shot">
+            <button class="shot__thumb" type="button" data-title="CI/CD to Kubernetes" data-images='["/assets/img/projects/devops-1-1.webp", "/assets/img/projects/devops-1-2.webp"]' aria-label="View 2 diagrams for CI/CD to Kubernetes">
+              <img src="/assets/img/projects/devops-1-thumb.webp" alt="CI/CD to Kubernetes architecture diagram" loading="lazy">
+              <span class="shot__count">2 diagrams</span>
+            </button>
+            <div class="shot__body">
+              <h3>CI/CD to Kubernetes</h3>
+              <p>A GitHub webhook triggers Jenkins to build with Maven; Ansible builds and pushes Docker images to Docker Hub and deploys the containers to Kubernetes.</p>
+              <ul class="chips chips--mono"><li>Jenkins</li><li>Maven</li><li>Ansible</li><li>Docker</li><li>Kubernetes</li></ul>
+              <div class="card__links"><a href="https://github.com/pramodbn27/devops-project-1" target="_blank" rel="noopener">GitHub &rarr;</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <dialog class="lightbox" aria-label="Architecture diagram viewer">
+      <div class="lightbox__bar">
+        <p class="lightbox__title"></p>
+        <span class="lightbox__pos"></span>
+        <button class="icon-btn lightbox__close" type="button" aria-label="Close">&times;</button>
+      </div>
+      <div class="lightbox__stage">
+        <button class="icon-btn lightbox__nav lightbox__prev" type="button" aria-label="Previous diagram">&larr;</button>
+        <img class="lightbox__img" alt="">
+        <button class="icon-btn lightbox__nav lightbox__next" type="button" aria-label="Next diagram">&rarr;</button>
+      </div>
+    </dialog>
+
   </main>
 
   <footer class="footer">
@@ -98,6 +205,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=a34205c4"></script>
+  <script src="/assets/js/main.js?v=2be52c93"></script>
 </body>
 </html>
