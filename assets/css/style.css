@@ -340,7 +340,32 @@ code { font-family: var(--mono); font-size: 0.88em; }
 .community--home .community__mark { width: 44px; height: 44px; font-size: 0.66rem; }
 
 /* About */
-.portrait { width: 100%; max-width: 320px; aspect-ratio: 1; object-fit: cover; object-position: center 20%; border-radius: 20px; border: 1px solid var(--border); background: #fff; }
+/* Hexagon portrait with fluorescent frame */
+.portrait-frame {
+  --hex: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  width: 100%;
+  max-width: 320px;
+  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--neon-2) 70%, transparent)) drop-shadow(0 0 26px color-mix(in srgb, var(--neon-5) 45%, transparent));
+  animation: portrait-glow 4s ease-in-out infinite alternate;
+}
+.portrait-hex {
+  aspect-ratio: 0.866;
+  padding: 6px;
+  clip-path: var(--hex);
+  background: conic-gradient(from 200deg, var(--neon-2), var(--neon-1), var(--neon-3), var(--neon-5), var(--neon-4), var(--neon-6), var(--neon-2));
+}
+.portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 31% 22%;
+  clip-path: var(--hex);
+  background: #ffffff;
+}
+@keyframes portrait-glow {
+  to { filter: drop-shadow(0 0 14px color-mix(in srgb, var(--neon-3) 75%, transparent)) drop-shadow(0 0 34px color-mix(in srgb, var(--neon-2) 50%, transparent)); }
+}
+@media (prefers-reduced-motion: reduce) { .portrait-frame { animation: none; } }
 .edu li { padding: 14px 0; border-top: 1px solid var(--border); }
 .edu li:first-child { border-top: 0; }
 .edu strong { display: block; }
