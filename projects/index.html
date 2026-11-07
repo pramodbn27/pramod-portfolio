@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=dc9d9ff9">
+  <link rel="stylesheet" href="/assets/css/style.css?v=all-page-scroll">
 </head>
 <body>
 
@@ -45,16 +45,20 @@
   </header>
 
   <main id="main">
-    <section class="page-head">
+    <section class="page-head page-head--scroll">
       <div class="container">
         <p class="crumbs"><a href="/">Home</a> / Open Source</p>
         <p class="eyebrow">Open source</p>
         <h1>Open tools for production AI agents</h1>
         <p class="lead">Two open-source initiatives, both architected and led as Lead Cloud &amp; Agentic AI Architect, that turn reliability, observability and governance principles into tools anyone can install, inspect and extend.</p>
+        <a class="hero__scroll" href="#initiatives" aria-label="Scroll down to open source projects">
+          <span class="hero__mouse" aria-hidden="true"><span class="hero__mouse-wheel"></span></span>
+          <span>Scroll</span>
+        </a>
       </div>
     </section>
 
-    <section class="section">
+    <section id="initiatives" class="section">
       <div class="container cards cards--2">
         <article class="card project">
           <div class="project__band"><div class="project__head"><h2>DeepAgentLabs</h2><span class="tag">AgenticOps</span></div><p class="project__role">Lead Cloud &amp; Agentic AI Architect</p></div>
@@ -205,6 +209,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=dc9d9ff9"></script>
+  <script src="/assets/js/main.js?v=scroll-navigation"></script>
 </body>
 </html>

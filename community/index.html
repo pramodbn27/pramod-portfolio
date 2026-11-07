@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=dc9d9ff9">
+  <link rel="stylesheet" href="/assets/css/style.css?v=all-page-scroll">
 </head>
 <body>
 
@@ -45,16 +45,20 @@
   </header>
 
   <main id="main">
-    <section class="page-head">
+    <section class="page-head page-head--scroll">
       <div class="container">
         <p class="crumbs"><a href="/">Home</a> / Community</p>
         <p class="eyebrow">Community</p>
         <h1>Community leadership</h1>
         <p class="lead">Founder of three technical communities and a leader in two more, bringing practitioners together across Dallas and online to learn, build and ship.</p>
+        <a class="hero__scroll" href="#communities" aria-label="Scroll down to communities">
+          <span class="hero__mouse" aria-hidden="true"><span class="hero__mouse-wheel"></span></span>
+          <span>Scroll</span>
+        </a>
       </div>
     </section>
 
-    <section class="section">
+    <section id="communities" class="section">
       <div class="container">
         <p class="eyebrow">Leadership</p>
         <h2>Communities</h2>
@@ -145,6 +149,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=dc9d9ff9"></script>
+  <script src="/assets/js/main.js?v=scroll-navigation"></script>
 </body>
 </html>

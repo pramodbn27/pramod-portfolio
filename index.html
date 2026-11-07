@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=highlight-roles">
+  <link rel="stylesheet" href="/assets/css/style.css?v=all-page-scroll">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Pramod B N", "url": "https://pramod.cloud", "image": "https://pramod.cloud/assets/img/pramod_pic.jpeg", "jobTitle": "Cloud & Agentic AI Solutions Architect", "email": "mailto:pramodbn27@gmail.com", "sameAs": ["https://www.linkedin.com/in/pramodbn27", "https://github.com/pramodbn27", "https://mvp.microsoft.com/en-US/MVP/profile/205f903a-6d24-4566-81f5-7a5549df8368", "https://mvp.alibabacloud.com/mvp/detail/384"], "award": ["Microsoft MVP", "Alibaba Cloud MVP"], "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Northeastern University"}, {"@type": "CollegeOrUniversity", "name": "Visvesvaraya Technological University"}], "knowsAbout": ["Cloud architecture", "Agentic AI", "Kubernetes", "Observability", "Site reliability engineering", "AI governance"]}</script>
 </head>
 <body>
@@ -69,25 +69,31 @@
             <li><a href="https://mvp.alibabacloud.com/mvp/detail/384" target="_blank" rel="noopener"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>Alibaba Cloud MVP</a></li>
           </ul>
         </div>
-        <div class="skills-panel" aria-label="Skills">
-          <p class="eyebrow">Core skills</p>
-          <ul class="skills-grid">
-            <li><strong>Solutions Architecture</strong><span>Cloud &amp; AI systems design</span></li>
-            <li><strong>Agentic AI</strong><span>Agents &amp; workflows</span></li>
-            <li><strong>AWS</strong><span>Cloud architecture</span></li>
-            <li><strong>Kubernetes</strong><span>Platform engineering</span></li>
-            <li><strong>Observability</strong><span>Tracing &amp; telemetry</span></li>
-            <li><strong>Open Source Technologist</strong><span>Building in the open</span></li>
-          </ul>
-          <p class="skills-label">Technologies</p>
-          <ul class="chips chips--mono"><li>Terraform</li><li>CI/CD</li><li>SRE</li><li>OpenTelemetry</li><li>Microservices</li><li>Serverless</li><li>Multi-region</li><li>AI</li><li>Distributed Systems</li></ul>
-          <p class="skills-label">Thought leadership</p>
-          <ul class="chips"><li>IEEE Standards Development</li><li>AI Governance</li><li>AI Reliability</li><li>Open-Source Leadership</li><li>Community Building</li><li>Cloud Education</li><li>Technology Policy</li></ul>
+        <div class="hero__skills">
+          <div class="skills-panel" aria-label="Skills">
+            <p class="eyebrow">Core skills</p>
+            <ul class="skills-grid">
+              <li><strong>Solutions Architecture</strong><span>Cloud &amp; AI systems design</span></li>
+              <li><strong>Agentic AI</strong><span>Agents &amp; workflows</span></li>
+              <li><strong>AWS</strong><span>Cloud architecture</span></li>
+              <li><strong>Kubernetes</strong><span>Platform engineering</span></li>
+              <li><strong>Observability</strong><span>Tracing &amp; telemetry</span></li>
+              <li><strong>Open Source Technologist</strong><span>Building in the open</span></li>
+            </ul>
+            <p class="skills-label">Technologies</p>
+            <ul class="chips chips--mono"><li>Terraform</li><li>CI/CD</li><li>SRE</li><li>OpenTelemetry</li><li>Microservices</li><li>Serverless</li><li>Multi-region</li><li>AI</li><li>Distributed Systems</li></ul>
+            <p class="skills-label">Thought leadership</p>
+            <ul class="chips"><li>IEEE Standards Development</li><li>AI Governance</li><li>AI Reliability</li><li>Open-Source Leadership</li><li>Community Building</li><li>Cloud Education</li><li>Technology Policy</li></ul>
+          </div>
+          <a class="hero__scroll" href="#highlights" aria-label="Scroll down to highlights">
+            <span class="hero__mouse" aria-hidden="true"><span class="hero__mouse-wheel"></span></span>
+            <span>Scroll</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="proof" aria-label="Highlights">
+    <section id="highlights" class="proof" aria-label="Highlights">
       <div class="container">
         <ul class="proof__list">
           <li class="proof__item"><span class="proof__num">2</span><span class="proof__label">Guinness World Records</span></li>
@@ -255,7 +261,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section id="standards" class="section">
       <div class="container">
         <div class="section__head">
           <div>
@@ -282,7 +288,7 @@
       </div>
     </section>
 
-    <section class="section section--alt">
+    <section id="community" class="section section--alt">
       <div class="container">
         <div class="section__head">
           <div>
@@ -461,7 +467,7 @@
       </div>
     </section>
 
-    <section class="section section--alt cta">
+    <section id="collaborate" class="section section--alt cta">
       <div class="container">
         <p class="eyebrow">Collaborate</p>
         <h2>Speaking, standards or open source?</h2>
@@ -474,6 +480,15 @@
     </section>
 
   </main>
+
+  <nav class="scroll-controls" aria-label="Scroll between page sections">
+    <button class="scroll-controls__button" type="button" data-scroll="up" aria-label="Scroll to previous section" title="Previous section" disabled>
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg>
+    </button>
+    <button class="scroll-controls__button" type="button" data-scroll="down" aria-label="Scroll to next section" title="Next section">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 10 6 6 6-6"/></svg>
+    </button>
+  </nav>
 
   <footer class="footer">
     <div class="container footer__inner">
@@ -490,6 +505,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=dc9d9ff9"></script>
+  <script src="/assets/js/main.js?v=scroll-navigation"></script>
 </body>
 </html>

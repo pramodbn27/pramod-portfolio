@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=dc9d9ff9">
+  <link rel="stylesheet" href="/assets/css/style.css?v=all-page-scroll">
 </head>
 <body>
 
@@ -45,16 +45,20 @@
   </header>
 
   <main id="main">
-    <section class="page-head">
+    <section class="page-head page-head--scroll">
       <div class="container">
         <p class="crumbs"><a href="/">Home</a> / Contact</p>
         <p class="eyebrow">Contact</p>
         <h1>Get in touch</h1>
         <p class="lead">Choose a topic to start an email with the right subject line, or reach out directly.</p>
+        <a class="hero__scroll" href="#contact-topics" aria-label="Scroll down to contact options">
+          <span class="hero__mouse" aria-hidden="true"><span class="hero__mouse-wheel"></span></span>
+          <span>Scroll</span>
+        </a>
       </div>
     </section>
 
-    <section class="section">
+    <section id="contact-topics" class="section">
       <div class="container">
         <div class="topics">
           <a class="topic" href="mailto:pramodbn27@gmail.com?subject=Speaking%20Invitation%20%E2%80%94%20via%20pramod.cloud">
@@ -108,6 +112,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=dc9d9ff9"></script>
+  <script src="/assets/js/main.js?v=scroll-navigation"></script>
 </body>
 </html>

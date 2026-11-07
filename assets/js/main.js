@@ -25,6 +25,35 @@ menu.querySelectorAll('a').forEach((link) =>
   })
 );
 
+// Floating homepage controls move to the adjacent section.
+const scrollControls = document.querySelector('.scroll-controls');
+if (scrollControls) {
+  const upButton = scrollControls.querySelector('[data-scroll="up"]');
+  const downButton = scrollControls.querySelector('[data-scroll="down"]');
+  const sections = [...document.querySelectorAll('main > section, .footer')];
+  const updateScrollControls = () => {
+    upButton.disabled = window.scrollY <= 4;
+    downButton.disabled = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+  };
+  scrollControls.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-scroll]');
+    if (!button || button.disabled) return;
+    const offset = document.querySelector('.nav').getBoundingClientRect().height + 12;
+    const positions = sections.map(section => Math.max(0, section.getBoundingClientRect().top + window.scrollY - offset));
+    const goingDown = button.dataset.scroll === 'down';
+    const target = goingDown
+      ? positions.find(position => position > window.scrollY + 8)
+      : positions.reverse().find(position => position < window.scrollY - 8);
+    window.scrollTo({
+      top: target ?? (goingDown ? document.documentElement.scrollHeight : 0),
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+    });
+  });
+  window.addEventListener('scroll', updateScrollControls, { passive: true });
+  window.addEventListener('resize', updateScrollControls);
+  updateScrollControls();
+}
+
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 

@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=dc9d9ff9">
+  <link rel="stylesheet" href="/assets/css/style.css?v=all-page-scroll">
 </head>
 <body>
 
@@ -45,16 +45,20 @@
   </header>
 
   <main id="main">
-    <section class="page-head">
+    <section class="page-head page-head--scroll">
       <div class="container">
         <p class="crumbs"><a href="/">Home</a> / Standards</p>
         <p class="eyebrow">IEEE Standards leadership</p>
         <h1>IEEE P4211 &amp; IEEE P4213</h1>
         <p class="lead">Serving as Working Group Chair for IEEE P4211 and IEEE P4213, leading international standards development initiatives focused on operational lifecycle management, governance, and end-to-end observability of production AI systems.</p>
+        <a class="hero__scroll" href="#standards-projects" aria-label="Scroll down to standards projects">
+          <span class="hero__mouse" aria-hidden="true"><span class="hero__mouse-wheel"></span></span>
+          <span>Scroll</span>
+        </a>
       </div>
     </section>
 
-    <section class="section">
+    <section id="standards-projects" class="section">
       <div class="container cards cards--2">
         <article class="card standard">
           <div class="card__meta"><span class="tag tag--ieee">IEEE P4211</span><span class="status">Active PAR</span></div>
@@ -139,6 +143,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=dc9d9ff9"></script>
+  <script src="/assets/js/main.js?v=scroll-navigation"></script>
 </body>
 </html>
