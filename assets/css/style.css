@@ -327,7 +327,23 @@ code { font-family: var(--mono); font-size: 0.88em; }
 .chips--mono li { font-family: var(--mono); font-size: 0.78rem; }
 
 /* Project cards */
-.card.project { padding: 0; gap: 0; overflow: hidden; }
+.project-artifacts { margin-top: 8px; border: 1px solid color-mix(in srgb, var(--glow) 55%, var(--border)); border-radius: 10px; background: var(--surface-2); }
+.project-artifacts summary { display: flex; align-items: center; gap: 10px; padding: 14px; cursor: pointer; color: var(--text); font-size: 0.9rem; font-weight: 600; list-style: none; }
+.project-artifacts summary::-webkit-details-marker { display: none; }
+.project-artifacts summary::before { content: "+"; color: var(--glow); font-family: var(--mono); font-size: 1.2rem; }
+.project-artifacts[open] summary::before { content: "−"; }
+.project-artifacts summary:hover { background: color-mix(in srgb, var(--glow) 8%, transparent); border-radius: 10px; }
+.project-artifacts__count { margin-left: auto; color: var(--accent); font-family: var(--mono); font-size: 0.75rem; white-space: nowrap; }
+.project-artifacts__body { padding: 0 14px 14px; border-top: 1px solid var(--border); }
+.card .project-artifacts__heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin: 18px 0 10px; color: var(--text); font-weight: 600; font-size: 0.9rem; }
+.project-artifacts__heading span { font-size: 0.75rem; color: var(--muted); font-weight: 400; }
+.project-artifacts__platforms { display: flex; flex-wrap: wrap; gap: 6px; }
+.project-artifacts__platforms a, .project-artifacts__downloads a { display: block; padding: 4px 8px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
+.project-artifacts__platforms a:hover, .project-artifacts__downloads a:hover { border-color: var(--accent); }
+.project-artifacts a { font-size: 0.75rem; overflow-wrap: anywhere; }
+.project-artifacts__downloads { display: flex; flex-wrap: wrap; gap: 6px; }
+.project-artifacts__downloads > li { max-width: 100%; }
+.card.project { align-self: start; padding: 0; gap: 0; overflow: hidden; }
 .project__body { padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
 .project__head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 .project__band {
