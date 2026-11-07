@@ -556,6 +556,20 @@ code { font-family: var(--mono); font-size: 0.88em; }
 .cards--4 { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
 .mentor { gap: 6px; }
 .card .mentor__role { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--glow); margin-bottom: 6px; }
+
+/* Highlight speaking and conference roles */
+:is(#speaking, #conference-leadership) .mentor__role {
+  align-self: flex-start;
+  max-width: 100%;
+  padding: 7px 12px;
+  border: 1px solid var(--glow);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--glow) 16%, var(--surface));
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
 .mentor h3 { font-size: 1.2rem; }
 @media (max-width: 720px) { .cards--4 { grid-template-columns: 1fr; } }
 
