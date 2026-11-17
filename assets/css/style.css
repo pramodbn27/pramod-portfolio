@@ -354,6 +354,10 @@ code { font-family: var(--mono); font-size: 0.88em; }
     var(--surface-2);
 }
 .project__band h2, .project__band h3 { font-size: 1.6rem; margin: 0; letter-spacing: -0.02em; }
+.card .project__downloads { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 10px; margin: 16px 0 0; font-size: 0.8rem; }
+.project__downloads strong { color: var(--accent); font-family: var(--mono); font-size: 1.2rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.project__downloads-status { padding: 2px 7px; border: 1px solid var(--border); border-radius: 999px; font-size: 0.68rem; }
+.project__downloads[data-state="live"] .project__downloads-status { color: var(--accent); border-color: var(--accent); }
 .card .project__value { font-size: 1.02rem; color: var(--text); }
 
 .checklist li { padding: 12px 0 12px 30px; border-top: 1px solid var(--border); position: relative; color: var(--muted); }
